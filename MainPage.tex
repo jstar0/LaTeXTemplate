@@ -1,5 +1,5 @@
 % Packages & Document Configurations
-\documentclass[en]{IPLeiriaThesis}
+\documentclass[en]{ThesisTemplate}
 
 % 添加中文支持
 \usepackage{xeCJK}
@@ -31,13 +31,18 @@
 \include{Chapters/00-Abstract}
 
 % List of contents, figures, and tables
-\tableofcontents\plainblankpage
-\listoffigures\plainblankpage
-\listoftables\plainblankpage
+\tableofcontents
+%\plainblankpage
+\listoffigures
+%\plainblankpage
+\listoftables
+%\plainblankpage
 
 % Print Glossary & Acronym
-\printglossary\plainblankpage
-\printglossary[type=\acronymtype]\plainblankpage
+\printglossary
+%\plainblankpage
+\printglossary[type=\acronymtype]
+%\plainblankpage
 
 % Arabic numeration
 \pagenumbering{arabic}

@@ -5,6 +5,8 @@
     \pdfbookmark[0]{Front Matter}{frontmatter} % Add entry to PDF bookmarks group
     \pdfbookmark[1]{Cover}{cover} % Add entry to PDF
 }
+\pdfbookmark[0]{Cover}{cover} % Add entry to PDF bookmarks group
+\pdfbookmark[1]{Front Matter}{frontmatter} % Add entry to PDF
 
 % Add background picture
 \newcommand\BackgroundPicCover{%
@@ -87,4 +89,5 @@
 
     \vspace{68pt}
 \end{titlepage}
-\restoregeometry\blankpage
+\restoregeometry
+%\blankpage

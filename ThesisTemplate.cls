@@ -5,7 +5,7 @@
 
 % Class information
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{IPLeiriaThesis}[2023/12/12 IPLeiria Thesis Class]
+\ProvidesClass{ThesisTemplate}[2023/12/12 IPLeiria Thesis Class]
 
 % Process class options: document language
 \DeclareOption{en}{\def\IPLeiria@language{english}}
@@ -26,7 +26,7 @@
 % Select the language specified by the user
 \AtBeginDocument{%
     \ifx\IPLeiria@language\@undefined
-        \PackageWarning{IPLeiriaThesis}{Language not specified. Defaulting to English.}%
+        \PackageWarning{ThesisTemplate}{Language not specified. Defaulting to English.}%
         \selectlanguage{english}%
     \else
         \selectlanguage{\IPLeiria@language}%
