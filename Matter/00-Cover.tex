@@ -1,12 +1,10 @@
-\ifthenelse{\equal{\getLanguage}{portuguese}}{%
-    \pdfbookmark[0]{Capa}{capa} % Add entry to PDF bookmarks group
-    \pdfbookmark[1]{Frontispício}{frontispício} % Add entry to PDF
+\ifthenelse{\equal{\getLanguage}{chinese}}{%
+    \pdfbookmark[0]{前言}{前言} % Add entry to PDF bookmarks group
+    \pdfbookmark[1]{封面}{封面} % Add entry to PDF
 }{%
     \pdfbookmark[0]{Front Matter}{frontmatter} % Add entry to PDF bookmarks group
     \pdfbookmark[1]{Cover}{cover} % Add entry to PDF
 }
-\pdfbookmark[0]{Cover}{cover} % Add entry to PDF bookmarks group
-\pdfbookmark[1]{Front Matter}{frontmatter} % Add entry to PDF
 
 % Add background picture
 \newcommand\BackgroundPicCover{%

@@ -1,15 +1,22 @@
-% Author Name: José António Portela Areia 
+% Modified by JStar
+% Just to fit the needs of OUC thesis
+% Version: 1.0.0 - 2024/08/23
+% Public Repository: https://github.com/jstar0/LaTeXTemplate
+
+% Original Author Name: José António Portela Areia 
 % Author Contact: jose.apareia@gmail.com
 % Version: 2.0.0 - 2024/08/08
 % Public Repository: https://github.com/joseareia/ipleiria-thesis
 
 % Class information
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ThesisTemplate}[2023/12/12 IPLeiria Thesis Class]
+\ProvidesClass{ThesisTemplate}[2024/08/23 OUC Thesis Class]
 
 % Process class options: document language
+% 移除了对portuguese的支持
 \DeclareOption{en}{\def\IPLeiria@language{english}}
-\DeclareOption{pt}{\def\IPLeiria@language{portuguese}}
+\DeclareOption{zh}{\def\IPLeiria@language{chinese}}
+%\DeclareOption{pt}{\def\IPLeiria@language{portuguese}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions\relax
 
@@ -17,10 +24,11 @@
 \LoadClass[a4paper,twoside,11pt]{report}
 
 % Load the babel package with language settings
-\RequirePackage[main=english,portuguese]{babel}
+\RequirePackage[main=chinese,english]{babel}
 
 % Define a command to get the selected language
 \newcommand{\getLanguage}{\IPLeiria@language}
+% Default to English if the language is not defined
 \ifx\IPLeiria@language\@undefined\renewcommand{\getLanguage}{english}\fi
 
 % Select the language specified by the user
@@ -52,6 +60,7 @@
 \usepackage{eso-pic} % For the background in both front and back matter
 \usepackage{setspace} % For line height adjusts
 \usepackage{varwidth} % Dependency for the custom boxes
+\usepackage{ctex} % 添加中文支持
 
 % Load more libaries from tcolorbox package
 \tcbuselibrary{most}
@@ -236,7 +245,8 @@
 % Links
 \usepackage[bookmarks]{hyperref} % Required for links
 
-% Capitalise the first letter when \autoref for both English and Portuguese
+% Capitalise the first letter when \autoref for both English
+% removed the support for portuguese
 \addto\extrasenglish{\def\figureautorefname{Figure}}
 \addto\extrasenglish{\def\chapterautorefname{Chapter}}
 \addto\extrasenglish{\def\sectionautorefname{Section}}
@@ -245,9 +255,9 @@
 \addto\extrasenglish{\def\tableautorefname{Table}}
 \addto\extrasenglish{\def\partautorefname{Part}}
 \addto\extrasenglish{\def\appendixautorefname{Appendix}}
-\addto\extrasportuguese{\def\sectionautorefname{Secção}}
-\addto\extrasportuguese{\def\subsectionautorefname{Secção}}
-\addto\extrasportuguese{\def\subsubsectionautorefname{Secção}}
+%\addto\extrasportuguese{\def\sectionautorefname{Secção}}
+%\addto\extrasportuguese{\def\subsectionautorefname{Secção}}
+%\addto\extrasportuguese{\def\subsubsectionautorefname{Secção}}
 
 % Custom color for citations and references
 \hypersetup{
@@ -281,8 +291,8 @@
     \addtocounter{page}{1}%
     \vspace*{\fill}
     \begin{center}
-        \ifthenelse{\equal{\getLanguage}{portuguese}}{%
-            \textcolor{gray!50}{\textit{Página intencionalmente deixada em branco.}}
+        \ifthenelse{\equal{\getLanguage}{chinese}}{%
+            \textcolor{gray!50}{\textit{本页有意留白。}}
         }{%
             \textcolor{gray!50}{\textit{This page intentionally left blank.}}
         }
@@ -340,8 +350,8 @@
 % Code highlighting and printing
 \usepackage[newfloat]{minted}
 \newenvironment{code}{\captionsetup{type=listing}}{}
-\ifthenelse{\equal{\getLanguage}{portuguese}}{%
-    \SetupFloatingEnvironment{listing}{name=Listagem}
+\ifthenelse{\equal{\getLanguage}{chinese}}{%
+    \SetupFloatingEnvironment{listing}{name=代码}
 }{%
     \SetupFloatingEnvironment{listing}{name=Listing}
 }

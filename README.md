@@ -1,3 +1,19 @@
+## JStar自定义的OUC论文LaTeX模板
+
+### 介绍
+
+本项目是基于 IPLeiria Thesis 项目进行的二次开发，主要用于中国海洋大学本科生毕业设计（论文）的撰写。本项目的目的是为中国海洋大学的学生提供一个简洁、易用、符合学校要求的 LaTeX 模板，使学生能够更加专注于论文的内容，而不是格式的调整。
+
+### 相较于原项目的更改
+
+- 修改了封面的内容，使其符合中国海洋大学的要求
+- 更改多语言支持为中文和英文，去掉了葡萄牙语支持
+- 去掉了一些不必要的页面（主要是留白），如需，可以通过指令`\plainblankpage`打印出来
+
+---
+
+以下是原项目的 README 内容：
+
 ## Polytechnic University of Leiria: LaTeX Thesis Template
 [![made-with-latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg?color=green)](https://www.latex-project.org/)
 [![GitHub license](https://img.shields.io/badge/License-LaTeX%20v1.3c-green.svg)](https://www.latex-project.org/lppl/lppl-1-3c)

@@ -1,16 +1,16 @@
 \thispagestyle{plain} % Page style without header and footer
 
-\ifthenelse{\equal{\getLanguage}{portuguese}}{%
-    \pdfbookmark[1]{Declaração}{declaração} % Add entry to PDF
-    \chapter*{Declaração de Autoria} % Chapter* to appear without numeration
+\ifthenelse{\equal{\getLanguage}{chinese}}{%
+    \pdfbookmark[1]{声明}{声明} % Add entry to PDF
+    \chapter*{作者声明} % Chapter* to appear without numeration
 }{%
     \pdfbookmark[1]{Declaration}{declaration} % Add entry to PDF
     \chapter*{Declaration of Authorship} % Chapter* to appear without numeration
 }
 
-\ifthenelse{\equal{\getLanguage}{portuguese}}{%
-    O abaixo assinado declara que o presente trabalho intitulado ``\thetitle'' é um trabalho original e que não foi anteriormente apresentado, na sua totalidade ou em parte, a nenhuma universidade ou instituição de ensino superior para a obtenção de qualquer grau, diploma ou outras qualificações.
-    Declara-se igualmente que, tanto quanto é do seu conhecimento, este trabalho não contém material previamente publicado ou escrito por outra pessoa, exceto quando é feita a devida referência, reconhecimento e citação.%
+\ifthenelse{\equal{\getLanguage}{chinese}}{%
+    以下签名者特此声明，此题为“\thetitle”的作品为原创作品，其全部或部分内容未曾在任何大学或高等教育机构提交以获取学位、文凭或其他资格证书。
+    另特此声明，据本人所知，除注明出处、致谢和引用的内容外，本作品不包含其他人以前发表或撰写的任何材料。
 }{%
     Has undersigned, hereby it his declared that this work entitled ``\thetitle'' is the original work and that it has not previously in its entirety or in part been submitted at any university or higher education institution for the award of any degree, diploma, or other qualifications. It is also hereby declared that to the best of the knowledge, this work contains no material previously published or written by another person, except where due reference, acknowledgement, and citation is made.%
 }
