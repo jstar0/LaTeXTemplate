@@ -315,8 +315,8 @@
 \NewDocumentCommand{\keywordsen}{m}{
     \vspace{.4cm}\noindent\textbf{Keywords:} #1
 }
-\NewDocumentCommand{\keywordspt}{m}{
-    \vspace{.4cm}\noindent\textbf{Palavras-Chave:} #1
+\NewDocumentCommand{\keywordscn}{m}{
+    \vspace{.4cm}\noindent\textbf{关键词:} #1
 }
 
 % Blankpage with warning for left blank
