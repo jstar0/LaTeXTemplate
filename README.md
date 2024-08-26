@@ -1,11 +1,15 @@
-## JStar自定义的OUC论文LaTeX模板
+## JStar自定义的OUC实验报告LaTeX模板
 
 [![made-with-latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg?color=green)](https://www.latex-project.org/)
 [![GitHub license](https://img.shields.io/badge/License-LaTeX%20v1.3c-green.svg)](https://www.latex-project.org/lppl/lppl-1-3c)
-[![Release](https://img.shields.io/badge/Release-v1.0.0-green.svg)](https://github.com/jstar0/LaTeXTemplate/releases)
+[![Release](https://img.shields.io/badge/Release-v1.0.0.report-green.svg)](https://github.com/jstar0/LaTeXTemplate/releases)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-Maybe-yellow.svg)](https://github.com/jstar0/LaTeXTemplate/graphs/commit-activity)
 
 ### 介绍
+
+本分支（report）是专为实验报告设计，精简了不必要的页面，轻易上手。至于具体用法，请移步到主分支（master）查看。
+
+---
 
 本项目是基于 IPLeiria Thesis 项目进行的二次开发，主要用于中国海洋大学本科生毕业设计（论文）的撰写。本项目的目的是为中国海洋大学的学生提供一个简洁、易用、符合学校要求的 LaTeX 模板，使学生能够更加专注于论文的内容，而不是格式的调整。
 

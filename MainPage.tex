@@ -1,4 +1,4 @@
-% Packages & Document Configurations
+ % Packages & Document Configurations
 \documentclass[zh]{ThesisTemplate}
 
 % Document Variables (Title, Author, etc.)
@@ -19,10 +19,10 @@
 \pagenumbering{roman}
 
 % Declaration of Authorship
-\include{Matter/02-Declaration}
+%\include{Matter/02-Declaration}
 
 % Acknowledgements
-\include{Matter/03-Acknowledgements}
+%\include{Matter/03-Acknowledgements}
 
 % Abstract
 \include{Chapters/00-Abstract}
@@ -30,9 +30,9 @@
 % List of contents, figures, and tables
 \tableofcontents
 %\plainblankpage
-\listoffigures
+%\listoffigures
 %\plainblankpage
-\listoftables
+%\listoftables
 %\plainblankpage
 
 % Print Glossary & Acronym
@@ -48,24 +48,12 @@
 \include{Chapters/01-Introduction}
 \include{Chapters/02-Variables}
 \include{Chapters/03-Notes}
-\include{Chapters/04-Citations}
-\include{Chapters/05-Figures}
-\include{Chapters/06-Tables}
-\include{Chapters/07-Lists}
-\include{Chapters/08-Code}
-\include{Chapters/09-Conclusion}
 
 % Bibliography
-\blankpage\printbibliography
-
-% Appendices: Work that *YOU* developed
-\appendix
-\input{Matter/06-Appendices}
-\input{Chapters/Appendices/00-AppendixA}
-\input{Chapters/Appendices/01-AppendixB}
+%\blankpage
+\printbibliography
 
 % Annexes: Work that *YOU DID NOT* developed
-\input{Matter/07-Annexes}
 \input{Chapters/Annexes/00-AnnexA}
 
 % Back Page
