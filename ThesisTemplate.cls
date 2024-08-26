@@ -14,9 +14,9 @@
 
 % Process class options: document language
 % 移除了对portuguese的支持
-\DeclareOption{en}{\def\IPLeiria@language{english}}
-\DeclareOption{zh}{\def\IPLeiria@language{chinese}}
-%\DeclareOption{pt}{\def\IPLeiria@language{portuguese}}
+\DeclareOption{en}{\def\Thesis@language{english}}
+\DeclareOption{zh}{\def\Thesis@language{chinese}}
+%\DeclareOption{pt}{\def\Thesis@language{portuguese}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \ProcessOptions\relax
 
@@ -24,20 +24,36 @@
 \LoadClass[a4paper,twoside,11pt]{report}
 
 % Load the babel package with language settings
-\RequirePackage[main=chinese,english]{babel}
+\RequirePackage[main=english]{babel}
+
+% Set local captions for Chinese
+\AtBeginDocument{%
+    \ifx\Thesis@language\@undefined
+        \renewcommand{\getLanguage}{english}
+    \else
+        \ifthenelse{\equal{\Thesis@language}{chinese}}{
+            \babelprovide[import]{chinese}
+            \setlocalecaption{chinese}{table}{表}
+            \setlocalecaption{chinese}{figure}{图}
+            \setlocalecaption{chinese}{contents}{目录}
+            \setlocalecaption{chinese}{listfigure}{插图目录}
+            \setlocalecaption{chinese}{listtable}{表格目录}
+        }{}
+    \fi
+}
 
 % Define a command to get the selected language
-\newcommand{\getLanguage}{\IPLeiria@language}
+\newcommand{\getLanguage}{\Thesis@language}
 % Default to English if the language is not defined
-\ifx\IPLeiria@language\@undefined\renewcommand{\getLanguage}{english}\fi
+\ifx\Thesis@language\@undefined\renewcommand{\getLanguage}{english}\fi
 
 % Select the language specified by the user
 \AtBeginDocument{%
-    \ifx\IPLeiria@language\@undefined
+    \ifx\Thesis@language\@undefined
         \PackageWarning{ThesisTemplate}{Language not specified. Defaulting to English.}%
         \selectlanguage{english}%
     \else
-        \selectlanguage{\IPLeiria@language}%
+        \selectlanguage{\Thesis@language}%
     \fi
 }
 
@@ -49,7 +65,7 @@
 \usepackage{tocbibind} % Add list of figures and tables of contents
 \usepackage[toc,page]{appendix} % Add Appendix
 \usepackage{titling} % Titlepage and titleback customisation
-\usepackage[calc]{datetime2} % Current date with both 
+\usepackage[calc]{datetime2} % Current date
 \usepackage{tcolorbox} % Highlighted box
 \usepackage{subcaption} % For side-by-side figures
 \usepackage{xparse} % "Davide" problem... solved!
@@ -69,7 +85,9 @@
 \WarningsOff[blindtext] % No support for portuguese language
 
 % Colors
-\colorlet{darkred}{red!50!black}
+%\colorlet{darkred}{red!50!black}
+% replace all darkred with OUCBlue : RGB 0 64 152
+\definecolor{OUCBlue}{RGB}{0, 64, 152}
 \definecolor{frontpagedark}{HTML}{1c1c1c}
 
 % Margins
@@ -86,6 +104,15 @@
 % Fonts
 % \usepackage[utf8]{inputenc} % Required for international characters
 \usepackage[T1]{fontenc} % Font encoding for international characters
+
+%\setCJKmainfont{SimSun}
+%\setCJKsansfont{SimHei}
+%\setCJKmonofont{KaiTi}
+%\setCJKfamilyfont{zhsong}{SimSun}
+%\setCJKfamilyfont{zhhei}{SimHei}
+%\setCJKfamilyfont{zhkai}{KaiTi}
+%\setCJKfamilyfont{zhfs}{FangSong}
+
 % \usepackage{newpxtext} % Alternative use of the PX fonts
 \usepackage{newpxmath} % Alternative use of the PX fonts (Math)
 % \usepackage{microtype} % Slightly tweak font spacing for aesthetics
@@ -138,7 +165,7 @@
 \setlength\LTright{0pt} % Right margin
 \setlength\glsdescwidth{0.94\hsize} % Glossary description width
 \renewcommand{\glsnamefont}[1]{\textbf{#1}} % Notation in bold
-\renewcommand{\glossaryentrynumbers}[1]{\textit{(p. \textcolor{darkred}{#1})}} % Page number customisation
+\renewcommand{\glossaryentrynumbers}[1]{\textit{(p. \textcolor{OUCBlue}{#1})}} % Page number customisation
 
 % Adjust the height of the text area
 \addtolength{\textheight}{-20pt}
@@ -263,14 +290,14 @@
 \hypersetup{
 	colorlinks=true, % Whether to color the text of links
 	urlcolor=black, % Color for \url and \href links
-	linkcolor=darkred, % Color for \nameref links
-	citecolor=darkred, % Color of reference citations
+	linkcolor=OUCBlue, % Color for \nameref links
+	citecolor=OUCBlue, % Color of reference citations
 }
 
 % Chapters & Sections
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
-{\flushright\normalsize\huge\color{black}}%
+{\flushright\normalsize\huge\color{black}\CJKfontspec{STZhongsong}}%
 {\flushright\normalsize%
 {\fontsize{25}{25}\selectfont\hspace*{-1em}\rule[-2pt]{.1pt}{30pt}\hspace{0.5em}\raisebox{4.5pt}{\thechapter}}}%
 {10pt}%
