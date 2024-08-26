@@ -207,6 +207,14 @@
     uniquelist=false % Only show one author, e.g. (Author et al., 2023)
 ]{biblatex}
 
+% if use Chinese
+\ifthenelse{\equal{\getLanguage}{chinese}}{%
+    % Redefine the bibliography title
+    \DefineBibliographyStrings{english}{
+        bibliography = {参考文献},
+    }
+}{} % Do nothing
+
 \setlength\bibitemsep{1.5\itemsep} % Adjust the space between references
 \setlength\bibhang{0pt} % Remove indentation
 \renewcommand*{\bibfont}{\small} % Change references font size

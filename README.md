@@ -2,7 +2,7 @@
 
 [![made-with-latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg?color=green)](https://www.latex-project.org/)
 [![GitHub license](https://img.shields.io/badge/License-LaTeX%20v1.3c-green.svg)](https://www.latex-project.org/lppl/lppl-1-3c)
-[![Release](https://img.shields.io/badge/Release-v1.0.0-green.svg)](https://github.com/jstar0/LaTeXTemplate/releases)
+[![Release](https://img.shields.io/badge/Release-v1.0.1-green.svg)](https://github.com/jstar0/LaTeXTemplate/releases)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-Maybe-yellow.svg)](https://github.com/jstar0/LaTeXTemplate/graphs/commit-activity)
 
 ### 介绍
@@ -13,9 +13,8 @@
 
 ### 相较于原项目的更改
 
-- 修改了封面的内容，使其符合中国海洋大学的要求
+- 修改了封面的内容，使其符合中国海洋大学的样式
 - 更改多语言支持为中文和英文，去掉了葡萄牙语支持
-- 去掉了一些不必要的页面（主要是留白），如需，可以通过指令`\plainblankpage`打印出来
 
 ---
 
