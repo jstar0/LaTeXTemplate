@@ -1,8 +1,15 @@
 ## JStar自定义的OUC论文LaTeX模板
 
+[![made-with-latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg?color=green)](https://www.latex-project.org/)
+[![GitHub license](https://img.shields.io/badge/License-LaTeX%20v1.3c-green.svg)](https://www.latex-project.org/lppl/lppl-1-3c)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-green.svg)](https://github.com/jstar0/LaTeXTemplate/releases)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-Maybe-yellow.svg)](https://github.com/jstar0/LaTeXTemplate/graphs/commit-activity)
+
 ### 介绍
 
 本项目是基于 IPLeiria Thesis 项目进行的二次开发，主要用于中国海洋大学本科生毕业设计（论文）的撰写。本项目的目的是为中国海洋大学的学生提供一个简洁、易用、符合学校要求的 LaTeX 模板，使学生能够更加专注于论文的内容，而不是格式的调整。
+
+源项目基于LPPL v1.3c协议，因此本项目在遵循此协议的前提上，合规地进行二改分发。您也可以在本项目的基础上进行二次开发。
 
 ### 相较于原项目的更改
 
@@ -15,10 +22,6 @@
 以下是原项目的 README 内容：
 
 ## Polytechnic University of Leiria: LaTeX Thesis Template
-[![made-with-latex](https://img.shields.io/badge/Made%20with-LaTeX-1f425f.svg?color=green)](https://www.latex-project.org/)
-[![GitHub license](https://img.shields.io/badge/License-LaTeX%20v1.3c-green.svg)](https://www.latex-project.org/lppl/lppl-1-3c)
-[![Release](https://img.shields.io/badge/Release-v2.0.0-green.svg)](https://github.com/joseareia/ipleiria-thesis/releases)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green.svg)](https://github.com/joseareia/ipleiria-thesis/graphs/commit-activity)
 
 ### Description
 Optimize your academic document creation with this LaTeX template tailored for theses and dissertations at the [Polytechnic University of Leiria](https://www.ipleiria.pt/). Tailored specifically for students within the School of Management and Technology (ESTG), this template guarantees a refined, timeless, and professionally formatted document. With its clean and classic aesthetic, navigating through the template is exceptionally straightforward, making document creation a seamless and efficient endeavor. Curious? Explore the [demo](https://www.overleaf.com/latex/templates/unofficial-polytechnic-university-of-leiria-estg-thesis-slash-report-template/tqgbrncfhwgt.pdf) to see more!
